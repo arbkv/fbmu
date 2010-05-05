@@ -1,0 +1,13 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+	<img class="userpic msgpic" 
+		src="http://graph.facebook.com/{{ post_user.id }}/picture?type=square"
+		alt="{{ post_user.name|escape }}"
+		title="Link shared by {{ post_user.name|escape }}"/>
+	<div class="msgpic">
+		<span class="attention">Oops... Sorry, you can not view this link.</span><br/>
+		Only Facebook friends of <a class="fbcolor" href="{{post_user.profile_url}}">{{post_user.name|escape}}</a> are allowed<br/><br/><br/>
+		<span class="attention">You can create some friends-only links too:</span>
+	</div>
+{% endblock %}

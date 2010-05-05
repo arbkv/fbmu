@@ -1,0 +1,43 @@
+html { min-height: 100%; }
+body { font-family: Lucida Grande, geneva, helvetica, verdana, sans-serif; padding: 0; margin: 0; min-height: 100%; }
+body *{ padding: 0; margin: 0; font-weight: bold; color: #999; font-size: 14px; }
+
+#wrap { width: 720px; margin: 0 auto; }
+#top { height: 55px; margin-top: 16px; position: relative; border-bottom: solid 3px #f93; }
+div.down { min-height: 1px; position: absolute; bottom: 0; }
+img.userpic { width: 50px; height: 50px; margin-right: 10px; }
+#logo, #logo a { font-size: 32px; text-decoration: none; }
+#beta { font-size: 8px; font-weight: normal; }
+#nav { position: absolute; bottom: 0; right: 0; padding-bottom: 4px; text-align: right; }
+#nav li { display: inline; list-style: none; padding-left: 16px; }
+#nav a { text-decoration: none; } 
+
+#subtop { margin-bottom: 50px; align: left; font-weight: bold; color: #f93 }
+#content { min-height: 100px; width: 520px; margin: 0 auto; }
+a.fbcolor { color: #3B5998; }
+#action { min-height: 30px; width: 496px; padding: 12px; margin: 0 auto 250px auto; background-color: #eee}
+#comments { border-top: solid 2px #f93; }
+#footer { border-top: solid 0px #999; position: relative; bottom: 0; width: 720px; height: 25px; font-size: 10px; font-weight: normal; text-align: right; }
+#footnav { position: absolute; top: 0; right: 0;}
+#footnav, #footnav a { font-size: 10px; font-weight: normal; text-decoration: none; }
+#fblike { position: absolute; top: 0; left: 0; margin-top: 5px; }
+
+#message { width: 394px; height: 26px; font-size: 16px; font-weight: normal; color: #000; }  
+#status { width: 394px; height: 26px; font-size: 16px; font-weight: normal; color: #3B5998; }  
+#submit, #tweet, #clip { width: 85px; height: 29px; margin: -1px 0 0 10px; border-width: 1px; } 
+#submit { background: #f93; color: #000; }
+#tweet  { background: #3cf; color: #fff; } 
+#clip   { background: #999; color: #fff; } 
+
+span.attention { color: #000; }
+input.disabled { color: #666 !important; font-style: italic; }
+
+img.msgpic { float: left; }
+div.msgpic { padding-left: 60px; }
+div.center { width: 100%; text-align: center; }
+
+div.about { width: 520px; margin: 0 auto 50px; }
+div.about * {  font-size: 14px; font-weight: normal; }
+div.about h1 { color: #f93; font-weight: bold; margin: 32px auto 16px; font-size: 18px; }
+div.about p { color: #666; margin: 16px auto;  }
+div.about a { color: #3B5998; }

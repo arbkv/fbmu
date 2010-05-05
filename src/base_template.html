@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>fb.mu/ - Short URLs only friends can click</title>
+	<link href="/fb_mu.css" rel="stylesheet" type="text/css">
+
+<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-16189543-1");
+	pageTracker._setDomainName(".fb.mu");
+	pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</head>
+<body><div id="wrap">
+	<div id="top">
+		<div class="down">
+			{% if current_user %}
+				<img class="userpic" 
+					src="http://graph.facebook.com/{{ current_user.id }}/picture?type=square"
+					alt="{{ current_user.name|escape }}"
+					title="Logged in as {{ current_user.name|escape }}"/>
+			{% endif %}
+			<span id="logo"><a href="http://fb.mu/">fb.mu/</a></span><span id="beta">beta</span>
+		</div>
+		<ul id="nav">
+			<li><a href="/">home</a></li>
+			<li><a href="/about">about</a></li>
+		</ul>
+	</div>
+	<div id="subtop">friends-only url shortener</div>{% block page %}
+	<div id="content">{% block content %}
+		1. Shorten any URL<br/>
+		2. Post it on twitter, public blog, anywhere<br/>
+		<span class="attention">3. Link will work only for your Facebook friends</span>
+	{% endblock %}</div>
+	<div id="action">{% block action %}
+		<form name="messageform" id="messageform" action="/" method="post">
+			<input type="text" maxlength="480" id="message" name="message"
+			/><input type="submit" id="submit" value="Shorten!"/>
+		</form>
+		<script type="text/javascript" language="JavaScript">try{ document.forms["messageform"].elements["message"].focus(); }catch(err){}</script>
+	{% endblock %}</div>
+	<div id="comments"></div>
+	{% endblock page %}<div id="footer">
+			<iframe id="fblike" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffb.mu%2F&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px;"></iframe>
+			<div id="footnav">fb.mu/ &copy; 2010 | <a href="/about#terms">terms</a></div>
+		</div>
+	</div>
+	
+	<div id="fb-root"></div>
+    <script src="http://connect.facebook.net/en_US/all.js" type="text/javascript"></script>
+    <script>
+      FB.init({appId: '{{ facebook_app_id }}', status: true,
+               cookie: true, xfbml: true});
+      FB.Event.subscribe('auth.sessionChange', function(response) {
+    	  FB.Event.unsubscribe('auth.sessionChange');
+          window.location.reload();
+      });
+    </script></body>
+</html>

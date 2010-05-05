@@ -1,0 +1,15 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+	{{ current_user.first_name|escape }}, below is your short link for {{message|urlizetrunc:20}}<br/>
+	Copy/paste it to share on public blog or website, or just tweet!<br/>
+	<span class="attention">Link will work only for your Facebook friends</span>
+{% endblock %}
+	
+{% block action %}
+		<form name="messageform" id="messageform" action="http://twitter.com/home" method="get">
+			<input type="text" id="status" name="status" title="Friends-only link to {{message|escape}}" value="http://fb.mu/{{key}}" 
+			/><input type="submit" id="tweet" value="Tweet!" title="Post to twitter"/>
+		</form>
+		<script type="text/javascript" language="JavaScript">try{ document.forms["messageform"].elements["status"].focus(); }catch(err){}</script> 	
+{% endblock %}

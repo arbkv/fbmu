@@ -1,0 +1,32 @@
+{% extends "base_template.html" %}
+
+{% block page %}<div class="about">
+
+<h1>about fb.mu/</h1>
+<p><span class="attention">fb.mu/ allows you to shorten links (URLs) making them accessible for your Facebook friends only.</span> Feel free to post the short link on twitter or any public blog - only your friends will be able to use it.</p>
+<p>For example, you may wish to shorten a link like "www.best-restaurant-in-town.com/address.html", and then post on twitter: "folks, my birthday party is here http://fb.mu/3jKe". Your friends will be directed to the restaurant. Not friends will be denied. Try this out yourself.</p> 
+<p>Businesses may enjoy sending links to discounts and promotions, and encourage potential customers to make friends with business employees or owners.</p>
+
+<h1>the story behind</h1>
+
+<p>fb.mu/ is actually a one-man over-weekend effort. Current team consists of the only person, @arbkv. My motivation was actually to quick start with some technologies I plan to use on another project.</p>
+<p>The site uses two cloud services as a platform:<br/>
+<br/>
+ - Google App Engine (<a href="http://code.google.com/appengine/">http://code.google.com/appengine/</a>), and<br/>
+ - Facebook Open Graph API (<a href="http://developers.facebook.com/">http://developers.facebook.com/</a>)<br/></p>
+
+<p>Entire site code is about 170 lines of python code, and two html files. I started one Friday evening, and uploaded the production version same Sunday night. Entire project took about 30 hours of work, including: domain name purchase and setup, App Engine python and Django development, learning Open Graph API, and implementing Facebook authorization, website graphics design, html, css, and javascript coding, testing, and deployment. My only equipment were paper, pencil, coffee, MacBook Pro and a text editor.</p>
+<p>Any feedback or comments are welcome. Ping me on twitter @arbkv, or email arbkv at this site. If you liked the service, a word of mouth or two is appreciated. You may wish to tweet something <a href="http://twitter.com/home?status=just+discovered+a+nice+URL+shortener+http%3A%2F%2Ffb.mu%2F+-+only+Facebook+friends+are+redirected%2C+others+not+%3A%29+%23fb_mu+RT">like this</a>.</p>
+
+<h1 id="terms">disclaimer and terms</h1>
+<p>Welcome to the fb.mu/ site (the "site"). The site was developed with best effort to be bug-free and work properly, but it is not guaranteed.</p>
+<p>Your access to and use of the site, its services or content is at your own risk. The site is provided on an "AS IS" and “AS AVAILABLE” basis, without warranties or conditions of any kind, either express or implied including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+<p>People who created fb.mu/ (the "team") is not responsible for the actions, content, information, or data of third parties. Under no circumstances will the team be responsible for any loss or damage incurred or resulting from anyone’s use, including your use, of the site, or any content posted on it.</p>
+<p>fb.mu/ is a trademark of fb.mu/ team. fb.mu/ is not affiliated with Facebook. Facebook is a registered trademark of Facebook, Inc. All other trademarks are the property of their respective owners.</p>
+
+<p>Best wishes,<br/>
+@arbkv</p>
+
+</div>
+<div id="comments"></div>
+{% endblock page %}
